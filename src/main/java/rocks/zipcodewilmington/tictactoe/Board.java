@@ -5,22 +5,41 @@ package rocks.zipcodewilmington.tictactoe;
  */
 public class Board {
     public Board(Character[][] matrix) {
+        {' ', ' ', ' '},
+        {' ', ' ', ' '},
+        {' ', ' ', ' '};
     }
 
     public Boolean isInFavorOfX() {
-        return null;
+        Boolean xInFavor = false;
+
+
+        return xInFavor;
+        //return null;
     }
 
     public Boolean isInFavorOfO() {
-        return null;
+        Boolean oInFavor = false;
+
+
+        return oInFavor;
+        //return null;
     }
 
     public Boolean isTie() {
-        return null;
+        Boolean tied = false;
+
+
+        return tied;
+        //return null;
     }
 
     public String getWinner() {
-        return null;
+        String winner = "";
+
+
+        return winner;
+        //return null;
     }
 
 }
