@@ -4,13 +4,13 @@ package rocks.zipcodewilmington.tictactoe;
  * @author leon on 6/22/18.
  */
 public class Board {
+    private Character[][] matrix = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
+
     public Board(Character[][] matrix) {
-        {' ', ' ', ' '},
-        {' ', ' ', ' '},
-        {' ', ' ', ' '};
+        this.matrix = matrix;
     }
 
-    public Boolean isInFavorOfX() {
+    public Boolean isInFavorOfX() {  //does X have more spaces filled in? is it X's turn?
         Boolean xInFavor = false;
 
 
@@ -18,7 +18,7 @@ public class Board {
         //return null;
     }
 
-    public Boolean isInFavorOfO() {
+    public Boolean isInFavorOfO() {  //does O have more spaces filled in? is it O's turn?
         Boolean oInFavor = false;
 
 
@@ -26,9 +26,8 @@ public class Board {
         //return null;
     }
 
-    public Boolean isTie() {
+    public Boolean isTie() { //no spaces are equal to ' '
         Boolean tied = false;
-
 
         return tied;
         //return null;
