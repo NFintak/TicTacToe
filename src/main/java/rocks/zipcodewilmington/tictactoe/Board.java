@@ -78,7 +78,8 @@ public class Board {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[i][j] == 'X') {
                     numOfXs++;
-                } else if (matrix[i][j] == 'O') {
+                }
+                if (matrix[i][j] == 'O') {
                     numOfOs++;
                 }
             }
@@ -95,7 +96,8 @@ public class Board {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (matrix[j][i] == 'X') {
                     numOfXs++;
-                } else if (matrix[j][i] == 'O') {
+                }
+                if (matrix[j][i] == 'O') {
                     numOfOs++;
                 }
             }
@@ -106,7 +108,42 @@ public class Board {
                 winner = "O";
             }
         }
-
+        for (int i = 0; i < matrix.length; i++) {
+            int numOfXs = 0;
+            int numOfOs = 0;
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[j][j] == 'X') {
+                    numOfXs++;
+                }
+                if (matrix[j][j] == 'O') {
+                    numOfOs++;
+                }
+            }
+            if (numOfXs == 3) {
+                winner = "X";
+            }
+            if (numOfOs == 3) {
+                winner = "O";
+            }
+        }
+        for (int i = matrix.length - 1; i < matrix.length; i++) {
+            int numOfXs = 0;
+            int numOfOs = 0;
+            for (int j = 0; j < matrix.length; j++) {
+                if (matrix[j][i-j] == 'X') {
+                    numOfXs++;
+                }
+                if (matrix[j][i-j] == 'O') {
+                    numOfOs++;
+                }
+            }
+            if (numOfXs == 3) {
+                winner = "X";
+            }
+            if (numOfOs == 3) {
+                winner = "O";
+            }
+        }
         return winner;
         //return null;
     }
