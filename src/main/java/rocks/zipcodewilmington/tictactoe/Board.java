@@ -72,7 +72,23 @@ public class Board {
 
     public String getWinner() {
         String winner = "";
-
+        for (int i = 0; i < matrix.length; i++) {
+            int numOfXs = 0;
+            int numOfOs = 0;
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j] == 'X') {
+                    numOfXs++;
+                } else if (matrix[i][j] == 'O') {
+                    numOfOs++;
+                }
+            }
+            if (numOfXs == 3) {
+                winner = "X";
+            }
+            if (numOfOs == 3) {
+                winner = "O";
+            }
+        }
 
         return winner;
         //return null;
